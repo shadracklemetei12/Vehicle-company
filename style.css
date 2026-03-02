@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff3c00;
+}
+
+.hero {
+    background: url(car1.jpg')
+    height: 90vh;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.btn {
+    background: #ff3c00;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;border-radius: 20px;
+
+}
+
+.btn:hover {
+    background: rgb(123, 181, 206);
+}
+
+
+
+.car-card {
+    background: white;
+    width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+}
+.purchase-form {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.purchase-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0d1b2a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1b263b;
+}
+.cars{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: ;
+}
+.whoweare{
+    width: 500px;
+    align-items: center;
+    text-align: center;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 30px;
+    background-color: antiquewhite;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+.whoweare:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.mission{
+    background-color: aqua;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin-left:20px ;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-left: 70px;
+
+}
+.mission:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.push{
+        background-color: aqua;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin-left:20px ;
+    margin-top: 50px;
+    margin-right: 50px;
+
+}
+
+.push:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.offer{
+        background-color: aqua;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin-left:20px ;
+    margin-top: 50px;
+
+}
+.offer:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.commitment{
+    background-color: #ff3c00;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 500px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 370px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.commitment:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

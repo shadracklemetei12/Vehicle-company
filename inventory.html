@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #0d1b2a;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #e6f0ff;
+}
+
+.btn {
+    padding: 6px 12px;
+    background: #0d1b2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1b263b;
+}
+    </style>
+</head>
+<body>
+<div class="buy">
+    <a href="purchase.html">
+    <button>Purchase</button>
+</a>
+</div>
+<h2 class="title">Available Vehicles</h2>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Category</th>
+                <th>Price (KSh)</th>
+                <th>Year</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Toyota Vitz</td>
+                <td>Hatchback</td>
+                <td>850,000</td>
+                <td>2018</td>
+                <td>Fuel-efficient and perfect for city driving.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Toyota Corolla Axio</td>
+                <td>Sedan</td>
+                <td>1,350,000</td>
+                <td>2017</td>
+                <td>Reliable sedan ideal for Uber and family use.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Honda Vezel</td>
+                <td>SUV</td>
+                <td>2,200,000</td>
+                <td>2016</td>
+                <td>Compact SUV with modern design and comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Subaru Forester</td>
+                <td>SUV</td>
+                <td>2,900,000</td>
+                <td>2015</td>
+                <td>All-wheel drive SUV for rough and smooth terrain.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Toyota Premio</td>
+                <td>Sedan</td>
+                <td>1,800,000</td>
+                <td>2016</td>
+                <td>Executive sedan with premium comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mazda Demio</td>
+                <td>SUV</td>
+                <td>1,500,000</td>
+                <td>2016</td>
+                <td>Fuel-efficient and stylish.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Subaru Impreza</td>
+                <td>Hatchback</td>
+                <td>1,800,000</td>
+                <td>2016</td>
+                <td>Sporty AWD sedan/hatch.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Honda Civic</td>
+                <td>Sedan</td>
+                <td>1,600,000</td>
+                <td>2016</td>
+                <td>Popular midsize sedan.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Toyota Premio</td>
+                <td>Sedan</td>
+                <td>2,000,000</td>
+                <td>2016</td>
+                <td>Executive sedan with premium comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Toyota Allion</td>
+                <td>Sedan</td>
+                <td>1,400,000</td>
+                <td>2016</td>
+                <td>4-door reliable sedan.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Nissan Tiida</td>
+                <td>Hatchback</td>
+                <td>1,300,000</td>
+                <td>2016</td>
+                <td>Hatch with good fuel economy.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Toyota Corolla</td>
+                <td>Sedan</td>
+                <td>1,500,000</td>
+                <td>2016</td>
+                <td>Classic sedan choice.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Toyota Premio</td>
+                <td>Sedan</td>
+                <td>1,800,000</td>
+                <td>2016</td>
+                <td>Executive sedan with premium comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Toyota Probox</td>
+                <td>Station Wagon</td>
+                <td>900,000</td>
+                <td>2016</td>
+                <td>Practical small van.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Toyota Ractis</td>
+                <td>Hatchback</td>
+                <td>800,000</td>
+                <td>2016</td>
+                <td>Compact MPV.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Nissan Bluebird</td>
+                <td>Sedan</td>
+                <td>900,000</td>
+                <td>2016</td>
+                <td>Comfortable sedan.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Toyota Premio</td>
+                <td>Sedan</td>
+                <td>1,800,000</td>
+                <td>2016</td>
+                <td>Executive sedan with premium comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Toyota Premio</td>
+                <td>Sedan</td>
+                <td>1,800,000</td>
+                <td>2016</td>
+                <td>Executive sedan with premium comfort.</td>
+                <td><a href="#" class="btn">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

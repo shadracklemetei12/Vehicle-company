@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="style.css">
+<section class="purchase-form">
+    <h2>Vehicle Purchase Request Form</h2>
+
+    <form>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+254 7XX XXX XXX" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>ID / Passport Number</label>
+            <input type="text" placeholder="Enter ID number" required>
+        </fieldset>
+
+        <!-- Vehicle Selection -->
+        <fieldset>
+            <legend>Vehicle Selection</legend>
+
+            <label>Select Vehicle</label>
+            <select required>
+                <option value="">-- Choose Vehicle --</option>
+                <option>Toyota Corolla Axio</option>
+                <option>Honda Vezel</option>
+                <option>Subaru Forester</option>
+                <option>Mazda CX-5</option>
+            </select>
+
+            <label>Preferred Year</label>
+            <input type="number" min="2005" max="2026">
+
+            <label>Color Preference</label>
+            <input type="text" placeholder="e.g Black, White, Silver">
+
+            <label>Transmission</label>
+            <select>
+                <option>Automatic</option>
+                <option>Manual</option>
+            </select>
+        </fieldset>
+
+        <!-- Custom Specifications -->
+        <fieldset>
+            <legend>Additional Specifications</legend>
+
+            <label>Fuel Type</label>
+            <select>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Hybrid</option>
+                <option>Electric</option>
+            </select>
+
+            <label>Budget Range (KSh)</label>
+            <input type="number" placeholder="Enter your budget">
+
+            <label>Additional Notes</label>
+            <textarea rows="4" placeholder="Any extra features? Sunroof, leather seats etc."></textarea>
+        </fieldset>
+
+        <!-- Payment Details -->
+        <fieldset>
+            <legend>Payment Method</legend>
+
+            <label>
+                <input type="radio" name="payment"> Cash
+            </label>
+
+            <label>
+                <input type="radio" name="payment"> Bank Financing
+            </label>
+
+            <label>
+                <input type="radio" name="payment"> Hire Purchase
+            </label>
+        </fieldset>
+
+        <!-- Delivery Details -->
+        <fieldset>
+            <legend>Delivery Details</legend>
+
+            <label>Delivery Location</label>
+            <input type="text" placeholder="Town / County">
+
+            <label>
+                <input type="checkbox"> I would like home delivery
+            </label>
+        </fieldset>
+
+        <!-- Agreement -->
+        <div class="agreement">
+            <label>
+                <input type="checkbox" required>
+                I confirm that the above information is accurate.
+            </label>
+        </div>
+
+        <button type="submit">Submit Request</button>
+
+    </form>
+</section>
