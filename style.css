@@ -1,212 +1,590 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+/* --- CSS Variables & Design Tokens --- */
+:root {
+    --primary-color: #ff3c00;
+    --primary-hover: #e63600;
+    --secondary-color: #0d1b2a;
+    --secondary-hover: #1b263b;
+    --bg-light: #f8f9fa;
+    --bg-dark: #111111;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --text-light: #ffffff;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --transition: 0.3s ease;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
+/* --- Global Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Header & Navigation --- */
 header {
-    background: #111;
-    color: white;
-    padding: 15px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
-    align-items: center;  
-    text-align: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+header img {
+    max-width: 120px; /* Scaled down slightly for better look */
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0 15px;
+    background: linear-gradient(90deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
+    color: var(--text-light);
     text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: var(--transition);
 }
 
 nav a:hover {
-    color: #ff3c00;
+    color: var(--primary-color);
 }
 
-.hero {
-    background: url(car1.jpg')
-    height: 90vh;
-    color: white;
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     text-align: center;
-    padding-top: 200px;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* --- Typography & Buttons --- */
+h2 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 
 .btn {
-    background: #ff3c00;
-    padding: 10px 20px;
-    color: white;
+    display: inline-block;
+    background: var(--primary-color);
+    padding: 12px 28px;
+    color: var(--text-light);
     text-decoration: none;
-    border-radius: 5px;border-radius: 20px;
-
+    border-radius: var(--border-radius-lg);
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn:hover {
-    background: rgb(123, 181, 206);
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('car1.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
 
+.hero h2 {
+    color: var(--text-light);
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* --- Car Grid (cars.html) --- */
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 .car-card {
-    background: white;
-    width: 300px;
+    background: var(--text-light);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: var(--border-radius-md);
     text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .car-card img {
     width: 100%;
-    border-radius: 8px;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 15px;
 }
 
 .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
+
+/* --- Purchase Form --- */
 .purchase-form {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: var(--text-light);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
 }
 
 .purchase-form h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
 
 fieldset {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius-sm);
+    background-color: #fafafa;
 }
 
 legend {
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 15px;
+    background: var(--text-light);
+    color: var(--primary-color);
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
 }
 
 label {
     display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 8px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #ccc;
+    font-family: var(--font-family);
+    transition: border-color var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 60, 0, 0.1);
+}
+
+.purchase-form button {
+    width: 100%;
+    padding: 15px;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
     margin-top: 10px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.purchase-form button:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background: #0d1b2a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #1b263b;
-}
-.cars{
+/* --- About Page --- */
+.about {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
-.about{
+.about > div {
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    color: var(--text-main);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: ;
+    flex-direction: column;
+    justify-content: center;
 }
-.whoweare{
-    width: 500px;
-    align-items: center;
+
+.about > div:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+/* About Specific Cards */
+.whoweare {
+    grid-column: 1 / -1; /* spans full width */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     text-align: center;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 30px;
-    background-color: antiquewhite;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-top: 20px;
-    padding: 10px;
+    border: 2px solid #eaeaea;
+}
+
+.mission {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.push {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.offer {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.commitment {
+    grid-column: 1 / -1;
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.commitment h2 {
+    color: var(--text-light);
+}
+
+.about ul {
+    list-style-position: inside;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.about li {
+    margin-bottom: 5px;
+}
+
+/* --- Inventory Page --- */
+.title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2.5rem;
+}
+
+.buy {
+    text-align: right;
+    margin: 20px 5%;
+}
+
+.buy button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.buy button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 0 5%;
+    background: var(--text-light);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensures table doesn't squish too much on mobile */
+}
+
+thead {
+    background: var(--secondary-color);
+    color: var(--text-light);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    transition: var(--transition);
+}
+
+tbody tr:nth-child(even) {
+    background: #fcfcfc;
+}
+
+tbody tr:hover {
+    background: #f0f7ff;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+
+/* Tablets and medium screens */
+@media (max-width: 992px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
     
-}
-.whoweare:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-.mission{
-    background-color: aqua;
-    padding-left: 30px;
-    padding-right: 20px;
-    border-radius: 30px;
-    margin-left:20px ;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-left: 70px;
+    .hero h2 {
+        font-size: 2.5rem;
+    }
 
-}
-.mission:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-.push{
-        background-color: aqua;
-    padding-left: 30px;
-    padding-right: 20px;
-    border-radius: 30px;
-    margin-left:20px ;
-    margin-top: 50px;
-    margin-right: 50px;
+    .hero p {
+        font-size: 1.3rem;
+    }
 
+    .cars {
+        gap: 20px;
+        padding: 30px 20px;
+    }
 }
 
-.push:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 5%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 20px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .purchase-form {
+        margin: 20px 15px;
+        padding: 25px 15px;
+    }
+    
+    .purchase-form h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    fieldset {
+        padding: 15px 10px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin: 30px 0 15px;
+    }
+
+    .buy {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .car-card img {
+        height: 180px;
+    }
+    
+    .about > div {
+        padding: 20px 15px;
+    }
 }
 
-.offer{
-        background-color: aqua;
-    padding-left: 30px;
-    padding-right: 20px;
-    border-radius: 30px;
-    margin-left:20px ;
-    margin-top: 50px;
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    header img {
+        max-width: 100px;
+    }
 
-}
-.offer:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-.commitment{
-    background-color: #ff3c00;
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 500px;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 370px;
-    align-items: center;
-    margin-bottom: 50px;
-}
-.commitment:hover{
-     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cars {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+
+    .car-card img {
+        height: 220px; /* Make it taller since it takes full width */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .purchase-form {
+        padding: 20px 10px;
+    }
+
+    .purchase-form button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    footer {
+        padding: 15px 10px;
+        font-size: 0.8rem;
+    }
 }
