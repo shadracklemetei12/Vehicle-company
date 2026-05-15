@@ -190,12 +190,12 @@ h2 {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .car-card img {
     width: 100%;
-    height: 200px; /* Fixed height for uniformity */
+    height: 200px;
     object-fit: cover;
     border-radius: var(--border-radius-sm);
     margin-bottom: 15px;
@@ -204,6 +204,36 @@ h2 {
 .car-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+}
+
+.car-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.car-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.car-info .price {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.car-info .specs {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.car-info .btn {
+    margin-top: auto; /* Pushes button to bottom */
+    width: 100%;
 }
 
 /* --- Purchase Form --- */
